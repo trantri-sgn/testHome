@@ -25,11 +25,11 @@ const Table = (): JSX.Element => {
     //validation
     const addEmployee = async () => {
       try {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const employeeList = await employeeAPI.postAll(newData);
         let dataToAdd = [...employee];
         dataToAdd.push(newData);
         setEmployee(dataToAdd);
-
         resolve();
       } catch (error) {
         console.log(error);
